@@ -1,0 +1,200 @@
+body{
+    zoom: 0.8 !important;
+    /* width: 100%; */
+}
+.container{
+    width: 2000px;
+}
+:root{
+    font-family:'Montserrat', sans-serif !important;
+    --primary-pink : #d30180 ;
+    --primary-dark-grey : #b3aeae;
+    --primary-light-grey : #ebebeb;
+	--primary-error : #e7271b;
+}
+.btn-pink{
+    background-color: var(--primary-pink);
+    border: 1px solid var(--primary-pink);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 0;
+    margin-top: 30px;
+}
+/* header start */
+header{
+    background-color: #000;
+}
+header nav .navbar-nav .nav-item .nav-link {
+    color: #fff;
+    font-size: 20px;
+}
+header nav .navbar-nav .nav-item .nav-link:hover {
+    color: #fff;
+    font-size: 20px;
+}
+header .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: #fff !important;
+}
+header nav .navbar-nav{
+    width: 650px;
+}
+header nav .navbar-nav .nav-item .signup-btn{
+    background-color: var(--primary-pink);
+    color: #fff;
+    border: 1px solid var(--primary-pink);
+    padding: 10px 30px;
+    margin-left: 30px;
+}
+/* header end */
+/* footer start */
+footer{
+    background-color: #000;
+    padding: 50px 0;
+}
+footer .footer-content h4{
+    font-size: 25px;
+    padding: 20px 0;
+    color: var(--primary-pink);
+}
+footer .footer-content ul{
+    list-style: none;
+}
+footer .footer-content ul li{
+    margin-left: -35px !important;
+    padding-bottom: 20px;
+}
+footer .footer-content ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+footer .copy-line{
+    font-size: 20px;
+    color: #fff;
+}
+/* ------------Sign Up Form Page---------------- */
+#signup-form{
+    padding: 100px 0;
+    background-image: url('../img/signup-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+#signup-form .signup-form-list{
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    box-shadow: 2px 3px 5px 1px #ddd;
+}
+#signup-form .signup-form-list form{
+    padding-top: 30px;
+}
+#signup-form .signup-form-list h2{color:#000;}
+#signup-form .signup-form-list p{color:#000;}
+#signup-form .signup-form-list label{color:#000;}
+#signup-form .signup-form-list .error{color:var(--primary-error);}
+#signup-form .signup-form-list form input,
+#signup-form .signup-form-list form select{
+    height: 55px;
+    border-radius: 0;
+    margin-bottom: 30px;
+}
+#signup-form .signup-form-list form button{
+    border: 1px solid #fff;
+    border-radius: 0;
+    font-weight: 700;
+    padding: 10px 30px;
+}
+/* ----------------------index page------------ */
+#quest-banner{
+    background-image: url('../images/banner-img.jpg');
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#quest-marketplace{
+    padding: 50px 0;
+}
+#quest-marketplace .quest-sell-now{
+    padding: 70px;
+}
+#quest-marketplace .quest-sell-now .media i{
+    font-size: 40px;
+    padding: 0px 20px;
+}
+#quest-marketplace .quest-sell-now .media .media-body h5{
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+#quest-latestwork{
+    padding: 50px 0;
+    background-color: var(--primary-light-grey);
+}
+#quest-latestwork .quest-work{
+    padding-top: 40px;
+}
+#quest-latestwork .img-latestwork img{
+    width: 100%;
+}
+#quest-trendingwork{
+    padding: 50px 0;
+}
+#quest-trendingwork h2{
+    letter-spacing: 10px;
+    padding-bottom: 40px;
+}
+#quest-trendingwork h2 span{
+    font-size: 20px;
+}
+#quest-trendingwork .quest-trending-images{
+    /* padding-top: 40px; */
+    display: flex;
+}
+#quest-trendingwork .quest-trending-images .quest-trend-img{
+    padding: 3px;
+}
+#quest-trendingwork .quest-trending-images .quest-trend-img img{
+    width: 100%;
+}
+#quest-about{
+    background-image: url('../images/quest-about-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    color: #fff;
+}
+#quest-blogs{
+    padding: 50px 0;
+}
+#quest-blogs h2 span{
+    color: var(--primary-pink);
+}
+#quest-blogs .quest-blog-list{
+    padding-top: 30px;
+}
+#quest-blogs .quest-blog-list .quest-blog-head p{
+    margin-top: -10px;
+    font-style: italic;
+}
+#quest-blogs .quest-blog-list .quest-blog-head p span{
+    color: var(--primary-dark-grey);
+}
+#quest-blogs .quest-blog-list img{
+    width: 100%;
+    padding-bottom: 15px;
+}
+#quest-blogs .quest-blog-list .quest-blog-content .blog-links .text-right{
+    position: absolute;
+    right: 15px;
+}
+
+
+
+
+
+
+
+
+
+

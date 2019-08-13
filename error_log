@@ -1,0 +1,13 @@
+
+[18-Nov-2017 15:58:52 UTC] PHP Warning:  Uncaught Error: Class 'Redis' not found in /home/gpcconline/public_html/system/libraries/Session/drivers/Session_redis_driver.php:137
+Stack trace:
+#0 [internal function]: CI_Session_redis_driver->open('/tmp', 'ci_session')
+#1 /home/gpcconline/public_html/system/libraries/Session/Session.php(140): session_start()
+#2 /home/gpcconline/public_html/system/core/Loader.php(1292): CI_Session->__construct()
+#3 /home/gpcconline/public_html/system/core/Loader.php(1185): CI_Loader->_ci_init_library('Session', 'CI_', NULL, 'session')
+#4 /home/gpcconline/public_html/system/core/Loader.php(1048): CI_Loader->_ci_load_stock_library('Session', 'Session/', NULL, NULL)
+#5 /home/gpcconline/public_html/system/core/Loader.php(1093): CI_Loader->_ci_load_library('Session', NULL, NULL)
+#6 /home/gpcconline/public_html/system/core/Loader.php(218): CI_Loader->_ci_load_library('Session', NULL, NULL)
+#7 /home/gpcconline/public_html/system/core/Loader.php(202): CI_Loader->library('session', NULL)
+#8 /home/gpcconline/public_html/system/core/ in /home/gpcconline/public_html/system/libraries/Session/drivers/Session_redis_driver.php on line 137
+[18-Nov-2017 15:58:52 UTC] PHP Fatal error:  session_start(): Failed to initialize storage module: user (path: /tmp) in /home/gpcconline/public_html/system/libraries/Session/Session.php on line 140
