@@ -64,7 +64,7 @@ $route['(:any)/dashboard'] = 'backend/$1/index';
 
 
 $route['admin/category'] = 'backend/admin/category'; 
-
+$route['admin/add_category'] = 'backend/admin/add_category'; 
 
 
 

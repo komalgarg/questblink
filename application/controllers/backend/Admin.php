@@ -24,7 +24,15 @@ class Admin extends CI_Controller {
 		
 		$data['template'] = "all_categories";
 		$data['sidebar'] = 1;
-		$data['title'] = 'Dashboard';
+		$data['title'] = 'Categories';
+        $this->load->view('backend/common/template', $data);
+	}
+	
+	public function add_category() {
+		
+		$data['template'] = "add_category";
+		$data['sidebar'] = 1;
+		$data['title'] = 'Add New Category';
         $this->load->view('backend/common/template', $data);
 	}
 
