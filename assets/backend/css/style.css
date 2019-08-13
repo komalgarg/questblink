@@ -5186,3 +5186,7 @@ footer .copy-line{
     font-weight: 700;
     padding: 10px 30px;
 }
+
+a.category-action{
+    color: #fff !important;
+}

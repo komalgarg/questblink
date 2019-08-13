@@ -65,7 +65,7 @@ $route['(:any)/dashboard'] = 'backend/$1/index';
 
 $route['admin/category'] = 'backend/admin/category'; 
 $route['admin/add_category'] = 'backend/admin/add_category'; 
-
-
+$route['admin/save_category'] = 'backend/admin/save_category';
+$route['admin/delete_category/(:any)'] = 'backend/admin/delete_category/$1';
 
 $route['default_controller'] = 'Main';
