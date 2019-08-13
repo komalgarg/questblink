@@ -1,0 +1,383 @@
+body{
+    zoom: 0.8 !important;
+    /* width: 100%; */
+}
+.container{
+    width: 2000px;
+}
+:root{
+    font-family:'Montserrat', sans-serif !important;
+    --primary-pink : #d30180 ;
+    --primary-dark-grey : #b3aeae;
+    --primary-light-grey : #ebebeb;
+}
+.btn-pink{
+    background-color: var(--primary-pink);
+    border: 1px solid var(--primary-pink);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 0;
+    margin-top: 30px;
+}
+/* header start */
+header{
+    background-color: #000;
+}
+header nav .navbar-nav .nav-item .nav-link {
+    color: #fff;
+    font-size: 20px;
+}
+header nav .navbar-nav .nav-item .nav-link:hover {
+    color: #fff;
+    font-size: 20px;
+}
+header .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: #fff !important;
+}
+header nav .navbar-nav{
+    width: 650px;
+}
+header nav .navbar-nav .nav-item .signup-btn{
+    background-color: var(--primary-pink);
+    color: #fff;
+    border: 1px solid var(--primary-pink);
+    padding: 10px 30px;
+    margin-left: 30px;
+}
+/* header end */
+/* footer start */
+footer{
+    background-color: #000;
+    padding: 50px 0;
+}
+footer .footer-content h4{
+    font-size: 25px;
+    padding: 20px 0;
+    color: var(--primary-pink);
+}
+footer .footer-content ul{
+    list-style: none;
+}
+footer .footer-content ul li{
+    margin-left: -35px !important;
+    padding-bottom: 20px;
+}
+footer .footer-content ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+footer .copy-line{
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: -20px;
+
+}
+
+/* ----------------------index page------------ */
+#quest-banner{
+    background-image: url('../images/banner-img.jpg');
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#quest-banner .quest-banner-btn{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#quest-banner .banner-search{
+    background-color: var(--primary-dark-grey);
+    padding: 10px;
+}
+#quest-banner .banner-search form input,
+#quest-banner .banner-search form select,
+#quest-banner .banner-search form button{
+    height: 55px;
+    border-radius: 0;
+    margin-right: -5px;
+}
+#quest-banner .banner-search form input{
+    border: 1px solid #fff;
+}
+#quest-banner .banner-search form select{
+    background-color: var(--primary-pink);
+    border: 1px solid var(--primary-pink);
+    color: #fff;
+}
+#quest-banner .banner-search form button{
+    width: 100%;
+    background-color: #000;
+    border: 1px solid #000;
+}
+#quest-banner .banner-search form button i{
+    font-size: 30px;
+}
+#quest-banner .banner-search .row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+#quest-marketplace{
+    padding: 50px 0;
+}
+#quest-marketplace .quest-sell-now{
+    padding: 70px;
+}
+#quest-marketplace .quest-sell-now .media i{
+    font-size: 40px;
+    padding: 0px 20px;
+}
+#quest-marketplace .quest-sell-now .media .media-body h5{
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+#quest-latestwork{
+    padding: 50px 0;
+    background-color: var(--primary-light-grey);
+}
+#quest-latestwork .quest-work{
+    padding-top: 40px;
+}
+#quest-latestwork .img-latestwork img{
+    width: 100%;
+    position: relative;
+}
+#quest-trendingwork{
+    padding: 50px 0;
+}
+#quest-trendingwork h2{
+    letter-spacing: 10px;
+    padding-bottom: 40px;
+}
+#quest-trendingwork h2 span{
+    font-size: 20px;
+}
+#quest-trendingwork .quest-trending-images{
+    /* padding-top: 40px; */
+    display: flex;
+}
+#quest-trendingwork .quest-trending-images .quest-trend-img{
+    padding: 3px;
+}
+#quest-trendingwork .quest-trending-images .quest-trend-img img{
+    width: 100%;
+}
+#quest-about{
+    background-image: url('../images/quest-about-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    color: #fff;
+}
+#quest-blogs{
+    padding: 50px 0;
+}
+#quest-blogs h2 span{
+    color: var(--primary-pink);
+}
+#quest-blogs .quest-blog-list{
+    padding-top: 30px;
+}
+#quest-blogs .quest-blog-list .blog-details{
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+#quest-blogs .quest-blog-list .quest-blog-head p{
+    margin-top: -10px;
+    font-style: italic;
+}
+#quest-blogs .quest-blog-list .quest-blog-head p span{
+    color: var(--primary-dark-grey);
+}
+#quest-blogs .quest-blog-list img{
+    width: 100%;
+    padding-bottom: 15px;
+}
+#quest-blogs .quest-blog-list .quest-blog-content .blog-links .text-left{
+    text-decoration: underline;
+}
+#quest-blogs .quest-blog-list .quest-blog-content .blog-links .text-left a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+#quest-blogs .quest-blog-list .quest-blog-content .blog-links .text-right{
+    position: absolute;
+    right: 30px;
+}
+
+/*---------------- photographer portfolio page start -----------------------*/
+#photogpher-portfolio-banner{
+    background-image: url('../images/photographer-portfolio-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+}
+#photogpher-portfolio-banner h1{
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+#photogpher-portfolio-banner p{
+    font-size: 22px;
+    font-weight: 600;
+}
+#photogpher-portfolio-banner ul{
+    list-style: none;
+    padding-left: 0;
+}
+#photogpher-portfolio-banner ul li{
+    display: inline;
+    padding-right: 25px;
+}
+#photogpher-portfolio-banner ul li a i{
+    font-size: 25px;
+    color: #000;
+}
+#photogpher-portfolio-banner ul li a i:hover{
+    color: var(--primary-pink);
+}
+#photofrapher-work{
+    padding: 50px;
+}
+#photofrapher-work h2{
+    letter-spacing: 10px;
+    padding-bottom: 40px;
+}
+#photofrapher-work .photographer-work-image{
+    padding-top: 25px;
+}
+#photofrapher-work .hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+#photofrapher-work .hovereffect .overlay {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+	top: auto;
+	bottom: 0;
+	padding: 1em;
+	height: 4.75em;
+	background-color: var(--primary-pink);
+	color: #fff;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+	/* visibility: hidden; */
+
+}
+
+#photofrapher-work .hovereffect img {
+    display: block;
+    position: relative;
+	-webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+#photofrapher-work .hovereffect:hover img {
+-webkit-transform: translate3d(0,-10%,0);
+    transform: translate3d(0,-10%,0);
+}
+
+#photofrapher-work .hovereffect h3 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+	float: left;
+	margin: 0px;
+	display: inline-block;
+}
+
+#photofrapher-work .hovereffect a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    text-transform: uppercase;
+	color: #fff;
+	border: 1px solid #fff;
+	margin: 50px 0 0 0;
+	background-color: transparent;
+}
+#photofrapher-work .hovereffect a.info:hover {
+    box-shadow: 0 0 5px #fff;
+}
+
+
+#photofrapher-work .hovereffect p.icon-links a {
+	float: right;
+	color: #fff;
+	font-size: 1.4em;
+}
+
+#photofrapher-work .hovereffect:hover p.icon-links a:hover,
+#photofrapher-work .hovereffect:hover p.icon-links a:focus {
+	color: #252d31;
+}
+
+#photofrapher-work .hovereffect h3,
+#photofrapher-work .hovereffect p.icon-links a {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+	visibility: visible;
+}
+
+#photofrapher-work .hovereffect p.icon-links a span:before {
+	display: inline-block;
+	padding: 8px 10px;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+#photofrapher-work .hovereffect:hover .overlay,
+#photofrapher-work .hovereffect:hover h3,
+#photofrapher-work .hovereffect:hover p.icon-links a {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+#photofrapher-work .hovereffect:hover h3 {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+#photofrapher-work .hovereffect:hover p.icon-links a:nth-child(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+#photofrapher-work .hovereffect:hover p.icon-links a:nth-child(2) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+#photofrapher-work .hovereffect:hover p.icon-links a:first-child {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+
+
+
+
+
+
+
+

@@ -23,9 +23,22 @@ class Login extends CI_Controller {
         $this->load->view("backend/common/template", $data);
     }
 	
+	public function send_password_email() { 
+	
+	
+		redirect(base_url().'login');
+    }
+	
 	public function reset_password() { 
 		$data['template'] = 'reset-password';
         $this->load->view("backend/common/template", $data);
+    }
+	
+	public function update_password() { 
+	
+	
+	
+		redirect(base_url().'login');
     }
 	
 	public function register() {

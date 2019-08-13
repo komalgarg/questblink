@@ -9,7 +9,8 @@ class Main extends CI_Controller {
     }
 
     public function index() {
-        $this->load->view('index');
+        $data['template'] = 'home_page';
+        $this->load->view("common/template", $data);
     }
 
     
