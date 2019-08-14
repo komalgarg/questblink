@@ -8,7 +8,7 @@ class Login extends CI_Controller {
         parent::__construct();
     }
 
-    public function index() { 
+    public function index() {  
 		$data['template'] = 'login';
         $this->load->view("backend/common/template", $data);
     }
@@ -24,21 +24,84 @@ class Login extends CI_Controller {
     }
 	
 	public function send_password_email() { 
-	
-	
+			$email = $_POST['find_email'];
+			require APPPATH.'libraries/mailer/PHPMailerAutoload.php';
+
+			$mail = new PHPMailer;
+
+			$mail->isSMTP();                                      // Set mailer to use SMTP
+			$mail->Host = 'smtp.gmail.com';                      // Specify main and backup SMTP servers
+			$mail->SMTPAuth = true;                               // Enable SMTP authentication
+			$mail->Username = 'karan.iiisol@gmail.com';                 // SMTP username
+			$mail->Password = 'karan@12345';                           // SMTP password
+			$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+			$mail->Port = 587;                                    // TCP port to connect to
+			$mail->isHTML(true);                                  // Set email format to HTML
+			
+			//check if user exists
+			$check_user = $this->primary->get_where('users', array('status'=> 1, 'deleted' => 0,'email' => $email ));
+
+			if(!empty($check_user)) {
+
+				function generateRandomString($length = 10) {
+					$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+					$charactersLength = strlen($characters);
+					$randomString = '';
+					for ($i = 0; $i < $length; $i++) {
+						$randomString .= $characters[rand(0, $charactersLength - 1)];
+					}
+					return $randomString;
+				}
+				
+				$mail->setfrom('noreply@example.com', 'qbstock');
+				$mail->addaddress($email, 'qbstock user');     // Add a recipient
+				$mail->Subject = "Password Reset Link";
+				$message = '<html><body>';
+				$message .= '<h1>Reset Your Password</h1>';
+				$message .= '<a href="'.base_url().'/reset-password/'. $check_user['id'] .'/'. generateRandomString(20).'"></a>';
+				$message .= '</body></html>';
+				$mail->Body = $message;
+				$mail->send();
+
+				if($mail->send()){
+					$this->session->set_flashdata('success', 'Please check your email.');
+					redirect(config_item(base_url()). 'login');
+				}else if(!$mail->send()){
+					$this->session->set_flashdata('error', 'email could not send!!');
+                	redirect(config_item(base_url()). 'login');
+				}
+
+			} else {
+				$this->session->set_flashdata('error', 'This email id does not exists.');
+                redirect(config_item(base_url()). 'forget-password');
+			}
+        	    
 		redirect(base_url().'login');
     }
 	
-	public function reset_password() { 
+	public function reset_password($id, $string) { 
 		$data['template'] = 'reset-password';
+		$data['id']= $id;
         $this->load->view("backend/common/template", $data);
     }
 	
 	public function update_password() { 
+		$userid = $_POST['userId'];
+		$password = $_POST['password'];
+		$password1 = $_POST['password1'];
+
+		if($password != $password1){
+			$this->session->set_flashdata('error', 'email could not send!!');
+            redirect(config_item(base_url()). 'reset-password');
+		}else{
+			$new_password = md5($password);
+			$this->primary->update('users', array('password' => $new_password), array('id' => $userid ));
+			$this->session->set_flashdata('success', 'password reset successfull');
+            redirect(config_item(base_url()). 'login');
+		}
 	
 	
-	
-		redirect(base_url().'login');
+		//redirect(base_url().'login');
     }
 	
 	public function register() {
