@@ -19,7 +19,7 @@ Class Primary_model extends CI_Model {
         $this->db->order_by($order);
         $query = $this->db->get_where($table, $where);
         if ($result == TRUE) {
-            return $query->result();
+            return $query->result_array();
         } else {
             return $query->row_array();
         }
@@ -29,7 +29,7 @@ Class Primary_model extends CI_Model {
         $this->db->join($joinTbl, $joinCond, $joinType);
         $query = $this->db->get_where($table, $where);
         if ($result == TRUE) {
-            return $query->result();
+            return $query->result_array();
         } else {
             return $query->row_array();
         }
@@ -40,7 +40,7 @@ Class Primary_model extends CI_Model {
         $this->db->order_by($order);
         $query = $this->db->get_where($table, $where);
         if ($result == TRUE) {
-            return $query->result();
+            return $query->result_array();
         } else {
             return $query->row_array();
         }
@@ -49,7 +49,7 @@ Class Primary_model extends CI_Model {
     public function get_where_in($table, $where, $values) {
         $this->db->where_in($where, $values);
         $query = $this->db->get($table);
-        return $query->result();
+        return $query->result_array();
     }
 
     public function get_where_order_in($table, $order, $where = array(), $in = array('col' => '0', 'val' => 0)) {
@@ -57,13 +57,13 @@ Class Primary_model extends CI_Model {
         $this->db->where($where);
         $this->db->order_by($order);
         $query = $this->db->get($table);
-        return $query->result();
+        return $query->result_array();
     }
 
     public function get_where_not_in($table, $where, $values) {
         $this->db->where_not_in($where, $values);
         $query = $this->db->get($table);
-        return $query->result();
+        return $query->result_array();
     }
 
     public function get_where_order_limit($table, $limit, $order = array(), $where = array(), $result = FALSE) {
@@ -71,7 +71,7 @@ Class Primary_model extends CI_Model {
         $this->db->limit($limit);
         $query = $this->db->get_where($table, $where);
         if ($result == TRUE) {
-            return $query->result();
+            return $query->result_array();
         } else {
             return $query->row_array();
         }
@@ -83,7 +83,7 @@ Class Primary_model extends CI_Model {
         }
         $query = $this->db->get_where($table, $where);
         if ($result == TRUE) {
-            return $query->result();
+            return $query->result_array();
         } else {
             return $query->row_array();
         }
@@ -98,7 +98,7 @@ Class Primary_model extends CI_Model {
         }
         $query = $this->db->get_where($table, $where);
         if ($result == TRUE) {
-            return $query->result();
+            return $query->result_array();
         } else {
             return $query->row_array();
         }
@@ -111,7 +111,7 @@ Class Primary_model extends CI_Model {
         $this->db->order_by($order);
         $query = $this->db->get_where($table, $where);
         if ($result == TRUE) {
-            return $query->result();
+            return $query->result_array();
         } else {
             return $query->row_array();
         }
@@ -125,7 +125,7 @@ Class Primary_model extends CI_Model {
         $this->db->from($table);
         $query = $this->db->get_where($table, $where);
         if ($result == TRUE) {
-            return $query->result();
+            return $query->result_array();
         } else {
             return $query->row_array();
         }
@@ -140,7 +140,7 @@ Class Primary_model extends CI_Model {
         $this->db->from($table);
         $query = $this->db->get_where($table, $where);
         if ($result == TRUE) {
-            return $query->result();
+            return $query->result_array();
         } else {
             return $query->row_array();
         }
