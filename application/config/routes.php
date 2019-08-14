@@ -62,10 +62,27 @@ $route['register'] = 'backend/login/register';
 $route['check_login'] = 'backend/login/check_login'; 
 $route['(:any)/dashboard'] = 'backend/$1/index'; 
 
-
+/*Admin */
 $route['admin/category'] = 'backend/admin/category'; 
 $route['admin/add_category'] = 'backend/admin/add_category'; 
 $route['admin/save_category'] = 'backend/admin/save_category';
 $route['admin/delete_category/(:any)'] = 'backend/admin/delete_category/$1';
+
+
+/*Seller */
+$route['seller/upload-file'] = 'backend/seller/upload_file'; 
+
+
+
+/*Buyer */
+
+
+
+/*Blogger */
+$route['blogger/add-blog'] = 'backend/blogger/add_blog'; 
+$route['blogger/save_blog'] = 'backend/blogger/save_blog'; 
+$route['blogger/update_blog/(:any)'] = 'backend/blogger/update_blog/$1'; 
+
+
 
 $route['default_controller'] = 'Main';

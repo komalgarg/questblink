@@ -19,19 +19,11 @@ class Seller extends CI_Controller {
         $this->load->view('backend/common/template', $data);
     }
 
-    public function logout() {
-        $this->primary->delete('auth_token', array("user_id" => $this->session->userdata('user_id')));
-        if ($this->session->userdata('log_id')) {
-            $log_id = $this->session->userdata('log_id');
-        } else {
-            $log_id = get_cookie('rememberme_log');
-        }
-        $this->primary->update('user_login_log', array('logout_time' => date('Y-m-d H:i:s', time())), array('log_id' => $log_id));
-        $this->session->unset_userdata();
-        $this->session->sess_destroy();
-        delete_cookie('rememberme');
-        delete_cookie('rememberme_log');
-        redirect(base_url(), 'location');
-    }
+    public function upload_file() {
+		$data['template'] = "upload_new_file";
+		$data['sidebar'] = 1;
+		$data['title'] = 'Upload new file';
+        $this->load->view('backend/common/template', $data);
+	}
 
 }
