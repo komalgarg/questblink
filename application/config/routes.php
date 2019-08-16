@@ -73,6 +73,7 @@ $route['admin/delete_category/(:any)'] = 'backend/admin/delete_category/$1';
 
 /*Seller */
 $route['seller/upload-file'] = 'backend/seller/upload_file'; 
+$route['seller/save_uploaded_file'] = 'backend/seller/save_uploaded_file';
 
 
 

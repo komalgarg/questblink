@@ -31,9 +31,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Category</label> 
-                                    <select name="category[1][]" multiple id="langOpt">
+                                    <select name="category[1][]" multiple class="langOpt">
                                         <option value="category here"></option>
                                     </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tags</label>
+                                    <input name="tags[1]" type="text" class="form-control" >
                                 </div>
                                 <div class="form-group">
                                     <label>Loaction</label>
@@ -55,13 +59,17 @@
                                     <input name="editorial[1]" type="radio" class="" value="1" > Yes 
                                     <input name="editorial[1]" type="radio" class="" value="2" > No            
                                 </div>
+                                <div class="form-group">
+                                    <label>Upload File</label>
+                                    <input name="uploaded_file[1]" type="file" class="form-control">           
+                                </div>
                                 </div>
                                 
                             </div>
                             <div class="form-group">
                                 <input type="button" id="add-more" class="btn btn-secondary" value="ADD" > 
                             </div>
-                            <input type="hidden" id="total-blocks" value="0">
+                            <input name="total_post" type="hidden" id="total-blocks" value="1">
                             <div class="form-group">
                                 <input type="submit" name="submit" class="btn btn-primary" value="Save" >
                             </div>
@@ -86,7 +94,7 @@
 </div>
 <div class="form-group">
     <label>Category</label> 
-    <select id="category" multiple id="langOpt">
+    <select id="category" multiple class="langOpt">
         <option value="category here"></option>
     </select>
 </div>
@@ -110,6 +118,10 @@
     <input  type="radio" class="editorial" value="1" > Yes 
     <input  type="radio" class="editorial" value="2" > No            
 </div>
+<div class="form-group">
+    <label>Upload File</label>
+    <input id="uploaded_file" type="file" class="form-control">           
+</div>
 </div>
 
 
@@ -117,7 +129,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="<?php echo base_url('assets/js/jquery.multiselect.js') ?>"></script>
 <script>
-    jQuery('#langOpt').multiselect({
+    jQuery('.langOpt').multiselect({
         columns: 1,
         placeholder: 'Select Languages'
     });
