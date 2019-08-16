@@ -38,7 +38,8 @@ class Mail_model extends CI_Model {
         $this->email->subject($subject);
         $this->email->message($message);
         $num = $this->email->send();
-            //echo $this->email->print_debugger();
+        echo $this->email->print_debugger();
+        die();
         unset($this->config);
         return $num;
     }

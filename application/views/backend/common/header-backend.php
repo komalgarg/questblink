@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="<?php echo config_item('backend_asset'); ?>css/bootstrap.css">
 	<link rel="stylesheet" href="<?php echo config_item('backend_asset'); ?>css/style.css">
 	<link rel="stylesheet" href="<?php echo config_item('backend_asset'); ?>css/style.min.css">
+  <link href="<?php echo base_url('assets/css/jquery.multiselect.css') ?>" rel="stylesheet" />
     <title>Questblinkstock</title>
   </head>
   <body>

@@ -84,7 +84,7 @@ $autoload['drivers'] = array();
   |
   |	$autoload['helper'] = array('url', 'file');
  */
-$autoload['helper'] = array('url', 'form', 'cookie', 'html', 'common', 'common_url', 'string');
+$autoload['helper'] = array('url', 'form', 'cookie', 'html', 'common', 'common_url', 'PhpMailerLib', 'string');
 
 /*
   | -------------------------------------------------------------------

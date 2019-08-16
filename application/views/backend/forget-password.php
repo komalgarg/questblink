@@ -4,11 +4,11 @@
 		<div class="row">
 			<div class="signup-form-list col-md-12">
 			  <h2>Forget Password</h2>
-				<form action="#">
+				<form action="send_password_email" method="POST">
 					<div class="form-row">
 						
 						<div class="col">
-						  <input type="email" class="form-control" placeholder="Email">
+						  <input type="email" name="find_email" class="form-control" placeholder="Email">
 						</div>
 					  </div>
 					  <div class="text-center">
