@@ -64,4 +64,38 @@ class Admin extends CI_Controller {
 		redirect(config_item(base_url()). 'admin/category');
 	}
 
+	public function portfolios() {
+		$portfolios = $this->primary->get_where_group_by('portfolios', null, 'post_id', TRUE);	
+		$data['template'] = "all_portfolios";
+		$data['sidebar'] = 1;
+		$data['title'] = 'Portfolios';
+		$data['portfolios'] = $portfolios;
+		$data['controller'] = $this;
+        $this->load->view('backend/common/template', $data);
+	}
+
+	public function view_portfolio($post_id) {
+		$portfolios = $this->primary->get_where('portfolios', array('post_id' => $post_id), TRUE);	
+		$data['template'] = "view_portfolio";
+		$data['sidebar'] = 1;
+		$data['title'] = 'Portfolios';
+		$data['portfolios'] = $portfolios;
+		$data['controller'] = $this;
+        $this->load->view('backend/common/template', $data);
+	}
+	public function approve_post($post_id, $id) {
+		$this->primary->update('portfolios', array('status' => 1), array('id' => $id));
+		redirect(base_url().'admin/view_portfolio/'.$post_id);
+	}
+
+	public function unapprove_post($post_id, $id) {
+		$this->primary->update('portfolios', array('status' => 0), array('id' => $id));
+		redirect(base_url().'admin/view_portfolio/'.$post_id);
+	}
+	public function get_username($id){
+		$user = $this->primary->get_where('users', array('id' => $id));
+		echo $user['fname'] . ' ' . $user['lname'];
+	}
+
 }
+

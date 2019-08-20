@@ -18,6 +18,12 @@
                                 <label>Portfolio Description </label>
                                 <textarea name="post_description" class="form-control" rows="4"></textarea>
                             </div>
+                            <div class="form-group">
+                                <label>Type</label>
+                                <input name="type" type="radio" class="" value="1" > Image 
+                                <input name="type" type="radio" class="" value="2" > Audio 
+                                <input name="type" type="radio" class="" value="3" > Video 
+                            </div>
                             <h3>Upload your files below :-</h3>
                             <div  id="all-upload">
                                 <div style="padding: 50px; border: 1px solid #ccc;" class="single-upload">
@@ -31,8 +37,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Category</label> 
-                                    <select name="category[1][]" multiple class="langOpt">
-                                        <option value="category here"></option>
+                                    <select name="category[1]"  class="form-control">
+                                    <?php foreach ($categories as $category){ ?>
+                                        <option value="<?php echo $category['name'] ?>"><?php echo $category['name'] ?></option>
+                                    <?php } ?>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -42,12 +50,6 @@
                                 <div class="form-group">
                                     <label>Loaction</label>
                                     <input name="location[1]" type="text" class="form-control" >
-                                </div>
-                                <div class="form-group">
-                                    <label>Type</label>
-                                    <input name="type[1]" type="radio" class="" value="1" > Image 
-                                    <input name="type[1]" type="radio" class="" value="2" > Audio 
-                                    <input name="type[1]" type="radio" class="" value="3" > Video 
                                 </div>
                                 <div class="form-group">
                                     <label>illust./Clip-Art</label>
@@ -94,19 +96,19 @@
 </div>
 <div class="form-group">
     <label>Category</label> 
-    <select id="category" multiple class="langOpt">
-        <option value="category here"></option>
+    <select id="category"  class="form-control">
+        <?php foreach ($categories as $category){ ?>
+            <option value="<?php echo $category['name'] ?>"><?php echo $category['name'] ?></option>
+        <?php } ?>
     </select>
+</div>
+<div class="form-group">
+    <label>Tags</label>
+    <input id="tags" type="text" class="form-control" >
 </div>
 <div class="form-group">
     <label>Loaction</label>
     <input id="location" type="text" class="form-control" >
-</div>
-<div class="form-group">
-    <label>Type</label>
-    <input  type="radio" class="type" value="1" > Image 
-    <input  type="radio" class="type" value="2" > Audio 
-    <input  type="radio" class="type" value="3" > Video 
 </div>
 <div class="form-group">
     <label>illust./Clip-Art</label>
@@ -131,7 +133,7 @@
 <script>
     jQuery('.langOpt').multiselect({
         columns: 1,
-        placeholder: 'Select Languages'
+        placeholder: 'Select Categories'
     });
 
     var totalBlocks = $('#total-blocks').val();
@@ -142,9 +144,17 @@
         cloned.attr("id", "");
         cloned.attr("class", "single-upload");
         cloned.show();
-        //cloned.find('input[id=""]').attr('name', 'chapter_name[' + total-blocks + ']').val('');
-        //cloned.find('textarea[id=""]').attr('name', 'chapter_desc[' + total-blocks + ']').val();
+        cloned.find('input[id="title"]').attr('name', 'title[' + totalBlocks + ']').val('');
+        cloned.find('textarea[id="description"]').attr('name', 'description[' + totalBlocks + ']').val('');
+        cloned.find('select[id="category"]').attr('name', 'category[' + totalBlocks + ']').val('');
+        cloned.find('input[id="location"]').attr('name', 'location[' + totalBlocks + ']').val('');
+        cloned.find('input[class="isllust_clipart"]').attr('name', 'isllust_clipart[' + totalBlocks + ']');
+        cloned.find('input[class="editorial"]').attr('name', 'editorial[' + totalBlocks + ']');
+        cloned.find('input[id="uploaded_file"]').attr('name', 'uploaded_file[' + totalBlocks + ']').val('');
+        cloned.find('input[id="tags"]').attr('name', 'tags[' + totalBlocks + ']').val('');
         $('#all-upload').append(cloned);
         $('#total-blocks').val(totalBlocks);
+
+
     });
 </script>

@@ -14,6 +14,16 @@ Class Primary_model extends CI_Model {
             return $query->row_array();
         }
     }
+    
+    public function get_where_group_by($table, $where = array(), $group='', $result = FALSE) {
+        $this->db->group_by($group);
+        $query = $this->db->get_where($table, $where);
+        if ($result == TRUE) {
+            return $query->result_array();
+        } else {
+            return $query->row_array();
+        }
+    }
 
     public function get_where_order($table, $order = array(), $where = array(), $result = FALSE) {
         $this->db->order_by($order);
