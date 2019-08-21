@@ -22,6 +22,12 @@
 						<span class="nav-label">Categories</span>
 					</a>
 				</li>
+				<li <?php echo ($this->uri->segment(2) == "portfolios") ? 'class="active"' : ''; ?>>
+					<a href="<?php echo base_url() . 'admin/portfolios'; ?>">
+						<i class="fa fa-edit"></i> 
+						<span class="nav-label">Portfolios</span>
+					</a>
+				</li>
 			<?php } else if($this->session->userdata('user')['user_role'] == 2) { ?>
 				<li <?php echo ($this->uri->segment(2) == "dashboard") ? 'class="active"' : ''; ?>>
 					<a href="<?php echo base_url('seller/dashboard'); ?>">

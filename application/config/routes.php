@@ -70,7 +70,10 @@ $route['admin/category'] = 'backend/admin/category';
 $route['admin/add_category'] = 'backend/admin/add_category'; 
 $route['admin/save_category'] = 'backend/admin/save_category';
 $route['admin/delete_category/(:any)'] = 'backend/admin/delete_category/$1';
-
+$route['admin/portfolios'] = 'backend/admin/portfolios';
+$route['admin/view_portfolio/(:any)'] = 'backend/admin/view_portfolio/$1';
+$route['admin/approve_post/(:any)/(:any)'] = 'backend/admin/approve_post/$1/$2';
+$route['admin/unapprove_post/(:any)/(:any)'] = 'backend/admin/unapprove_post/$1/$2';
 
 /*Seller */
 $route['seller/upload-file'] = 'backend/seller/upload_file'; 
