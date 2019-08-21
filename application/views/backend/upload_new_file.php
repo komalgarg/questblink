@@ -32,7 +32,8 @@
                                 <div class="form-group">
                                     <label>Category</label> 
                                     <select name="category[1][]" multiple class="langOpt">
-                                        <option value="category here"></option>
+                                        <option value="11">11</option>
+										<option value="12">12</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -95,7 +96,8 @@
 <div class="form-group">
     <label>Category</label> 
     <select id="category" multiple class="langOpt">
-        <option value="category here"></option>
+        <option value="11">11</option>
+		<option value="12">12</option>
     </select>
 </div>
 <div class="form-group">

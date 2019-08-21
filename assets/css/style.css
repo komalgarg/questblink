@@ -215,14 +215,23 @@ footer .copy-line{
     background-repeat: no-repeat;
     padding: 100px 0;
 }
+#photogpher-portfolio-banner .photographer-photo-upload img{
+    width: 60%;
+    background-color: #fff;
+    padding: 0px;
+    border-radius: 100%;
+    border: 4px solid #fff;
+}
 #photogpher-portfolio-banner h1{
     font-size: 40px;
     font-weight: 700;
     padding-bottom: 20px;
+    color: #fff;
 }
 #photogpher-portfolio-banner p{
     font-size: 22px;
     font-weight: 600;
+    color: #fff;
 }
 #photogpher-portfolio-banner ul{
     list-style: none;
@@ -234,7 +243,7 @@ footer .copy-line{
 }
 #photogpher-portfolio-banner ul li a i{
     font-size: 25px;
-    color: #000;
+    color: #fff;
 }
 #photogpher-portfolio-banner ul li a i:hover{
     color: var(--primary-pink);
@@ -371,6 +380,157 @@ footer .copy-line{
 #photofrapher-work .hovereffect:hover p.icon-links a:first-child {
 	-webkit-transition-delay: 0.2s;
 	transition-delay: 0.2s;
+}
+
+/*----------- Blog Page Start -----------------*/
+#blog-banner{
+    background-image: url('../images/blog-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+#blog-banner h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 70px;
+    font-weight: 800;
+}
+#blog-list-section{
+    padding: 70px 0;
+}
+#blog-list-section .blog-list-detail{
+    padding: 30px 0;
+}
+#blog-list-section .blog-list-detail:hover .card{
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.08);
+}
+#blog-list-section .blog-list-detail .card img{
+    width: 100%;
+}
+#blog-list-section .blog-list-detail .card .card-body .blog-date-info{
+    font-style: italic;
+    font-size: 15px;
+    margin-top: -10px;
+}
+#blog-list-section .blog-list-detail .card .card-body .card-title{
+    font-weight: 700;
+    color: var(--primary-pink);
+    margin-top: -10px;
+}
+#blog-list-section .blog-list-detail .card .card-body .card-text{
+    font-size: 15px;
+}
+#blog-list-section .blog-list-detail .card .card-body .blog-links span a{
+    text-decoration: none;
+    color: #000;
+}
+#blog-list-section .blog-list-detail .card .card-body .blog-links .text-left{
+    text-decoration: underline;
+}
+#blog-list-section .blog-list-detail .card .card-body .blog-links .text-right{
+    position: absolute;
+    right: 0;
+    padding-right: 25px;
+}
+
+/*------------- Inner Blog Page -----------------*/
+#inner-blog-banner{
+    background-image: url('../images/blog-inner-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+#inner-blog-banner h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 70px;
+    font-weight: 800;
+}
+#blog-detail-section{
+    padding: 60px 0;
+}
+#blog-detail-section h2{
+    font-weight: 700;
+    color: var(--primary-pink);
+    padding-bottom: 15px;
+}
+#blog-detail-section .blog-info{
+    font-size: 15px;
+    font-weight: 600;
+}
+#blog-detail-section .blog-info span{
+    padding-right: 30px;
+}
+#blog-detail-section img{
+    width: 100%;
+    padding-bottom: 20px;
+}
+#blog-detail-section .blog-form{
+    padding: 20px;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.08);
+}
+#blog-detail-section .blog-comments{
+    margin-top: 60px;
+    border: 1px solid rgb(179, 177, 177);
+    padding: 30px;
+}
+#blog-detail-section .blog-comments .blog-comment-view .comment-para span{
+    padding-left: 25px;
+    text-decoration: underline;
+}
+#blog-detail-section .blog-comments .blog-comment-view .comment-para span a{
+    text-decoration: none;
+}
+#blog-detail-section .blog-comments .form-group input{
+    margin-bottom: -30px;
+}
+#blog-detail-section .new-blog-detail{
+    background-color: var(--primary-light-grey);
+    padding: 20px;
+}
+#blog-detail-section .blog-photographer-accounts ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 20px;
+}
+#blog-detail-section .blog-photographer-accounts ul li{
+    display: inline;
+    padding: 20px;
+}
+#blog-detail-section .blog-photographer-accounts ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 28px;
+}
+#blog-detail-section .blog-photographer-accounts ul li a:hover{
+    color: var(--primary-pink);
+}
+/*-------------Career Page -------------------*/
+#career-banner{
+    background-image: url('../images/career-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+}
+#career-form-section{
+    padding: 70px 0;
+} 
+#career-form-section form{
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+}
+#career-form-section form input{
+    height: 55px;
+    border-radius: 0;
 }
 
 
