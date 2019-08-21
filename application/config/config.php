@@ -23,13 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   |
  */
 $whitelist = array('127.0.0.1', "::1");
-$whitelist1 = array('192.168.102', "::1");
 if (in_array($_SERVER['REMOTE_ADDR'], $whitelist)) {
     $config['base_url'] = 'http://localhost/questblink/';
-} elseif (in_array($_SERVER['REMOTE_ADDR'], $whitelist1)) {
-    $config['base_url'] = 'http://192.168.0.111/questblink/';
 } else {
-    $config['base_url'] = '';
+    $config['base_url'] = 'http://www.theiiisolutions.com/demo/questblink/';
 }
 
 $config['asset'] = $config['base_url'] . 'assets/';

@@ -24,29 +24,26 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <li class="nav-item <?php echo ($this->uri->segment(1) == '') ? 'active' : ''; ?>">
+                <a class="nav-link" href="<?php echo base_url(); ?>">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
+              <li class="nav-item <?php echo ($this->uri->segment(1) == 'about-us') ? 'active' : ''; ?>">
+                <a class="nav-link" href="<?php echo base_url() .'about-us'; ?>">About us</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact us</a>
+			  <li class="nav-item <?php echo ($this->uri->segment(1) == 'pricing') ? 'active' : ''; ?>">
+                <a class="nav-link" href="#">Pricing</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Documentation
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">License Agreement</a>
-                  <a class="dropdown-item" href="#">Website terms of use</a>
-                  <a class="dropdown-item" href="#">Career</a>
-                  <a class="dropdown-item" href="#">Privacy policy</a>
-                  <a class="dropdown-item" href="#">Help</a>
-                </div>
+			  <li class="nav-item <?php echo ($this->uri->segment(1) == 'gallery') ? 'active' : ''; ?>">
+                <a class="nav-link" href="#">Gallery</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link signup-btn" href="#">Login</a>
+			  <li class="nav-item <?php echo ($this->uri->segment(1) == 'career') ? 'active' : ''; ?>">
+                <a class="nav-link" href="<?php echo base_url() .'career'; ?>">Career</a>
+              </li>
+              <li class="nav-item <?php echo ($this->uri->segment(1) == 'contact-us') ? 'active' : ''; ?>">
+                <a class="nav-link" href="<?php echo base_url() .'contact-us'; ?>">Contact us</a>
+              </li>
+              <li class="nav-item <?php echo ($this->uri->segment(1) == 'login') ? 'active' : ''; ?>">
+                <a class="nav-link signup-btn" href="<?php echo base_url() .'login'; ?>">Login</a>
               </li>
             </ul>
           </div>

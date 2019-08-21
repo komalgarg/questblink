@@ -78,8 +78,8 @@ if (in_array($_SERVER['REMOTE_ADDR'], $whitelist)) {
     $password = '';
     $database = 'questblink';
 } else {
-	$username = 'root';
-    $password = '';
+	$username = 'webkumar';
+    $password = 'poiu@1234';
     $database = 'questblink';
 }
 $db['default'] = array(

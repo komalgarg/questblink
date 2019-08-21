@@ -91,5 +91,14 @@ $route['blogger/save_blog'] = 'backend/blogger/save_blog';
 $route['blogger/update_blog/(:any)'] = 'backend/blogger/update_blog/$1'; 
 
 
-
+/*Frontend s*/
 $route['default_controller'] = 'Main';
+$route['about-us'] = 'main/about_us';
+$route['blog'] = 'main/blog';
+$route['blog/(:any)'] = 'main/blog_details/$1';
+$route['career'] = 'main/career';
+$route['contact-us'] = 'main/contact_us';
+$route['faq'] = 'main/faq';
+$route['privacy-policy'] = 'main/privacy_policy';
+$route['term-conditions'] = 'main/term_conditions';
+$route['portfolio/(:any)'] = 'main/portfolio/$1';
